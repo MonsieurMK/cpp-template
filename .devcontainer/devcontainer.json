@@ -1,0 +1,17 @@
+{
+  "name": "CPP development container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "devuser",
+    },
+  },
+  "remoteUser": "devuser",
+  "updateRemoteUserUID": true,
+  "mounts": [
+    // Mount host git config
+    "source=${localEnv:HOME}/.gitconfig,target=/home/devuser/.gitconfig,type=bind,readonly",
+    // Mount ssh config
+    "source=${localEnv:HOME}/.ssh,target=/home/devuser/.ssh,type=bind,readonly",
+  ],
+}
