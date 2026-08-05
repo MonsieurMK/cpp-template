@@ -6,6 +6,7 @@
       "USERNAME": "devuser",
     },
   },
+  "postCreateCommand": "cmake --preset debug",
   "remoteUser": "devuser",
   "updateRemoteUserUID": true,
   "mounts": [
